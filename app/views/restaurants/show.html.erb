@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h2>  
+  <%= @restaurant.name %>
+</h2>
+<p>
+  <strong>Specialty:</strong>
+  <%= @restaurant.specialty %>
+</p>
+
+<div class="customers">
+    <h3>Customer List</h3>
+    <ul>
+        <% @restaurant.customers.each do |customer| %>
+                <li><%= customer.name %></li>
+            </tr>
+        <% end %>
+    </ul>
+    </table>
+</div>
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Back', restaurants_path %>

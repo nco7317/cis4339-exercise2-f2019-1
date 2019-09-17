@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise2</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <div id="header">
+          <h1>Restaurant Manager</h1>
+          <%= link_to "Restaurants", restaurants_path %> | <%= link_to "Customers", customers_path %>
+      </div>
+    <%= yield %>
+  </body>
+</html>
